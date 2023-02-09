@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-rational-order",
+    "stylelint-config-recommended-less"
+  ],
+  "plugins": ["stylelint-less"],
+  "customSyntax": "postcss-less",
+  "rules": {
+    "value-list-comma-newline-after": "never-multi-line",
+    "string-quotes": "single",
+    "declaration-empty-line-before": null,
+    "import-notation": "string",
+    "order/properties-order": [],
+    "plugin/rational-order": [
+      true,
+      {
+        "empty-line-between-groups": true
+      }
+    ],
+    "declaration-colon-newline-after": null
+  }
+}

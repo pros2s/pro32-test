@@ -1,0 +1,21 @@
+.App {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 30px 0;
+
+  overflow: hidden;
+
+  background-color: #1f1f1f;
+}
+
+.App__btns-controls,
+.App__search-controls {
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+}
+
+.App__search-controls {
+  margin-top: 40px;
+}
