@@ -1,6 +1,6 @@
 import { ChangeEvent, memo, InputHTMLAttributes } from 'react';
 
-import './Input.scss';
+import cls from './Input.module.less';
 
 type DefaultInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>;
 
@@ -16,7 +16,7 @@ export const Input = memo(({ value, onChange, ...otherProps }: InputProps) => {
 
   return (
     <input
-      className='Input'
+      className={cls.input}
       value={value ?? ''}
       onChange={changeHandler}
       maxLength={35}

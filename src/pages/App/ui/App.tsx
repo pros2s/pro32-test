@@ -1,20 +1,7 @@
-import { AlertControl } from 'models/AlertControl';
-import { TenMaxHintsControl } from 'models/TenVaxHintsControl';
-import { TextControl } from 'models/TextControl';
-import { ThreeMaxHintsControl } from 'models/ThreeMaxHintsControl';
-import './App.scss';
+import cls from './App.module.less';
 
-const App = () => (
-  <main className='App'>
-    <section className='d-flex App__btns-controls'>
-      <TextControl />
-      <AlertControl />
-    </section>
-    <section className='d-flex App__search-controls'>
-      <ThreeMaxHintsControl />
-      <TenMaxHintsControl />
-    </section>
+export const App = () => (
+  <main className={cls.app}>
+    <h1>Finally</h1>
   </main>
 );
-
-export default App;

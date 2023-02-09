@@ -1,32 +1,7 @@
-body {
-  margin: 0;
-
-  font-family: -apple-system, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 /* Firefox */
 * {
   scrollbar-width: auto;
   scrollbar-color: #3d3d3d #858585;
-}
-
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-*::-webkit-scrollbar-track {
-  background: #3d3d3d;
-  border-radius: 6px;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #3d3d3d;
-  border: 1px solid #858585;
-  border-radius: 6px;
 }
 
 .d-none {
@@ -45,23 +20,56 @@ body {
   width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
 html,
-body,
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: Helvetica-Neue, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+
+  border: 0;
+}
+
 div,
 span,
 object,
 iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
 figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
 h1,
 h2,
 h3,
@@ -72,86 +80,73 @@ p,
 blockquote,
 pre,
 a,
+abbr,
+address,
+cite,
 code,
+del,
+dfn,
 em,
-img,
+ins,
+q,
+samp,
 small,
-strike,
 strong,
 sub,
 sup,
-tt,
 b,
-u,
 i,
+hr,
+dl,
+dt,
+dd,
 ol,
 ul,
 li,
 fieldset,
-form,
-label,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-main,
-canvas,
-embed,
-footer,
-header,
-nav,
-section,
-video {
+legend,
+label {
   margin: 0;
   padding: 0;
 
-  font: inherit;
   font-size: 100%;
   vertical-align: baseline;
 
   border: 0;
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
-  text-size-adjust: none;
 }
 
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
 footer,
 header,
 nav,
 section,
-main {
+audio,
+video {
   display: block;
 }
 
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote::before,
-blockquote::after,
-q::before,
-q::after {
-  content: '';
-  content: none;
-}
-
 table {
-  border-collapse: collapse;
+  border-collapse: separate;
   border-spacing: 0;
+
+  caption,
+  th,
+  td {
+    text-align: left;
+    vertical-align: middle;
+  }
 }
 
-input {
-  border-radius: 0;
+a img {
+  border: 0;
+}
 
-  appearance: none;
+:focus {
+  outline: 0;
 }

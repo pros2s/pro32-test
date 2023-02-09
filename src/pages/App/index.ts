@@ -1,1 +1,1 @@
-export { AppAsync as App } from "./ui/App.async";
+export { App } from './ui/App';
