@@ -30,6 +30,11 @@ export default {
       template: 'public/index.html',
       target: 'res/index.html',
     }),
+    url({
+      publicPath: '/media/',
+    }),
+    svgr(),
+    svgo(),
     copy({
       targets: [{ src: 'public/favicon.ico', dest: 'res' }],
     }),
@@ -42,14 +47,15 @@ export default {
       exclude: 'node_modules/**',
     }),
     replace({
-      'process.env.NODE_ENV': JSON.stringify(isProd ? 'production' : 'development'),
+      'process.env.NODE_ENV': JSON.stringify(
+        isProd ? 'production' : 'development',
+      ),
     }),
-    postcss({ extract: false, modules: true, use: ['less'] }),
-    url({
-      publicPath: '/media/',
+    postcss({
+      extract: false,
+      modules: (path) => !!path.includes('.module.'),
+      use: ['less'],
     }),
-    svgr(),
-    svgo(),
     !isProd &&
       serve({
         open: true,
