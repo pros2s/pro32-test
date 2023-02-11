@@ -10,9 +10,9 @@ export const ColorControl = memo(() => {
 
   return (
     <section className={cls['color-control']}>
-      <ColorInput color={color.hex} />
+      <ColorInput paletteColor={color.hex} />
       <ColorPalette color={color} colorChangeHandler={setColor} />
-      <ColorRectangle color={color.hex} />
+      <ColorRectangle paletteColor={color.hex} />
     </section>
   );
 });

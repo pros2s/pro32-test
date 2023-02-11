@@ -3,13 +3,13 @@ import { Input } from 'ui/Input';
 import cls from './ColorInput.module.less';
 
 interface ColorInputProps {
-  color: string;
+  paletteColor: string;
 }
 
-export const ColorInput = memo(({ color }: ColorInputProps) => (
+export const ColorInput = memo(({ paletteColor }: ColorInputProps) => (
   <div className={cls['color-input']}>
-    <span style={{ backgroundColor: color }} />
+    <span style={{ backgroundColor: paletteColor }} />
     <Input />
-    <p>&Lambda;</p>
+    <p>▽</p>
   </div>
 ));
