@@ -10,13 +10,11 @@ interface ColorControlPickerProps {
 
 export const ColorControlPicker = memo(
   ({ paletteColor, setPaletteColor }: ColorControlPickerProps) => {
-    const [inputValue, setInputValue] = useState<string | number>('');
     const [isOpenedColorPicker, setIsOpenedColorPicker] =
       useState<boolean>(false);
 
-    const inputChangeHandler = useCallback((value: string) => {
+    const openPicker = useCallback(() => {
       setIsOpenedColorPicker(true);
-      setInputValue(value);
     }, []);
 
     const togglePicker = useCallback(() => {
@@ -27,10 +25,10 @@ export const ColorControlPicker = memo(
       <>
         <ColorInput
           paletteColor={paletteColor.hex}
-          inputChangeHandler={inputChangeHandler}
-          inputValue={inputValue}
           isOpenedColorPicker={isOpenedColorPicker}
           togglePicker={togglePicker}
+          openColorPicker={openPicker}
+          setCorrectPaletteColor={setPaletteColor}
         />
         {isOpenedColorPicker && (
           <ColorPalette
