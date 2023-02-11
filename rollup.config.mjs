@@ -1,5 +1,6 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+
 import typescript from '@rollup/plugin-typescript';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
@@ -26,23 +27,21 @@ export default {
     sourcemap: true,
   },
   plugins: [
-    htmlTemplate({
-      template: 'public/index.html',
-      target: 'res/index.html',
-    }),
     url({
       publicPath: '/media/',
     }),
     svgr(),
     svgo(),
+    htmlTemplate({
+      template: 'public/index.html',
+      target: 'res/index.html',
+    }),
     copy({
       targets: [{ src: 'public/favicon.ico', dest: 'res' }],
     }),
     resolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'] }),
     commonjs(),
-    typescript({
-      tsconfig: 'tsconfig.json',
-    }),
+    typescript({ tsconfig: 'tsconfig.json' }),
     babel({
       exclude: 'node_modules/**',
     }),
