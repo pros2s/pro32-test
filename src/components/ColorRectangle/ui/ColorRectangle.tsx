@@ -14,11 +14,14 @@ export const ColorRectangle = memo(({ paletteColor }: ColorRectangleProps) => {
   );
 
   return (
-    <div
-      style={{ backgroundColor: paletteColor }}
-      className={cls['color-rectangle']}
-    >
-      <p style={{ color: textColor }}>{paletteColor}</p>
+    <div className={cls['color-rectangle']}>
+      <h3>Output</h3>
+      <div
+        style={{ backgroundColor: paletteColor }}
+        className={cls['color-rectangle-btn']}
+      >
+        <p style={{ color: textColor }}>{paletteColor}</p>
+      </div>
     </div>
   );
 });

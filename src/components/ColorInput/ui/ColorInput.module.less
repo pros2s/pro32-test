@@ -1,4 +1,37 @@
+@import '../../../vars.less';
+
 .color-input {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+
+  width: @inputWidth;
+
+  background-color: @bg;
+  border: 2px solid @outline;
+  border-radius: @border-radius;
+}
+
+.focused {
+  outline: 3px solid @outline;
+}
+
+.color-span {
+  width: 12%;
+  height: 20px;
+  margin-left: 5px;
+}
+
+.color-btn {
+  color: @outline;
+  font-weight: 700;
+}
+
+.rotate-in,
+.rotate-out {
+  transition: transform 0.1s linear;
+}
+
+.rotate-out {
+  transform: rotate(180deg);
 }

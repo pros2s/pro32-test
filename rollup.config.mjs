@@ -39,7 +39,7 @@ export default {
     copy({
       targets: [{ src: 'public/favicon.ico', dest: 'res' }],
     }),
-    resolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'] }),
+    resolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'], jsnext: true }),
     commonjs(),
     typescript({ tsconfig: 'tsconfig.json' }),
     babel({

@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { Color, ColorPicker } from 'react-color-palette';
+import cls from './ColorPalette.module.less';
 import './palette.css';
 
 interface ColorPaletteProps {
@@ -9,8 +10,9 @@ interface ColorPaletteProps {
 
 export const ColorPalette = memo(
   ({ color, colorChangeHandler }: ColorPaletteProps) => (
+    <div className={cls.palette}>
       <ColorPicker
-        width={456}
+        width={300}
         height={200}
         color={color}
         onChange={colorChangeHandler}
@@ -18,5 +20,6 @@ export const ColorPalette = memo(
         hideHSV
         hideRGB
       />
-    ),
+    </div>
+  ),
 );

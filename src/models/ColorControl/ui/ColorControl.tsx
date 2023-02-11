@@ -1,7 +1,6 @@
-import { ColorInput } from 'components/ColorInput';
-import { ColorPalette } from 'components/ColorPalette';
-import { ColorRectangle } from 'components/ColorRectangle';
 import { memo } from 'react';
+import { ColorRectangle } from 'components/ColorRectangle';
+import { ColorControlPicker } from 'models/ColorControlPicker';
 import { useColor } from 'react-color-palette';
 import cls from './ColorControl.module.less';
 
@@ -10,8 +9,7 @@ export const ColorControl = memo(() => {
 
   return (
     <section className={cls['color-control']}>
-      <ColorInput paletteColor={color.hex} />
-      <ColorPalette color={color} colorChangeHandler={setColor} />
+      <ColorControlPicker paletteColor={color} setPaletteColor={setColor} />
       <ColorRectangle paletteColor={color.hex} />
     </section>
   );

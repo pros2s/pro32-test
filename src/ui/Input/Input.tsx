@@ -2,7 +2,10 @@ import { ChangeEvent, memo, InputHTMLAttributes } from 'react';
 
 import cls from './Input.module.less';
 
-type DefaultInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>;
+type DefaultInputProps = Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  'value' | 'onChange'
+>;
 
 interface InputProps extends DefaultInputProps {
   value?: string | number;
