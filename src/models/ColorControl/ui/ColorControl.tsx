@@ -5,7 +5,7 @@ import { useColor } from 'react-color-palette';
 import cls from './ColorControl.module.less';
 
 export const ColorControl = memo(() => {
-  const [color, setColor] = useColor('hex', '#121212');
+  const [color, setColor] = useColor('hex', '#42fbfc');
 
   return (
     <section className={cls['color-control']}>

@@ -3,13 +3,33 @@
 .color-input {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
-  width: @inputWidth;
+  width: 100%;
 
   background-color: @bg;
   border: 2px solid @outline;
   border-radius: @border-radius;
+}
+
+.input-block {
+  position: relative;
+}
+
+.validate-color-error {
+  position: absolute;
+  top: 105%;
+  left: -16%;
+  z-index: 1;
+
+  width: 300px;
+
+  color: @error;
+  font-size: 16px;
+
+  span {
+    font-weight: 600;
+  }
 }
 
 .focused {
@@ -17,7 +37,7 @@
 }
 
 .color-span {
-  width: 12%;
+  width: 20px;
   height: 20px;
   margin-left: 5px;
 }

@@ -70,9 +70,8 @@ export const ColorInput = memo(
     };
 
     return (
-      <div>
+      <>
         <h3>Input</h3>
-        {!isCorrectColor && 'Error'}
         <div
           className={classNames(cls['color-input'], [], {
             [cls.focused]: isInputFocused,
@@ -83,11 +82,18 @@ export const ColorInput = memo(
             style={{ backgroundColor: paletteColor }}
           />
 
-          <Input
-            onFocus={onInputFocus}
-            onChange={inputChangeHandler}
-            value={inputValue}
-          />
+          <div className={cls['input-block']}>
+            <Input
+              onFocus={onInputFocus}
+              onChange={inputChangeHandler}
+              value={inputValue}
+            />
+            {!isCorrectColor && isOpenedColorPicker && (
+              <p className={cls['validate-color-error']}>
+                Only <span>hex, rgb, rgba, hsl, hsla</span> formats
+              </p>
+            )}
+          </div>
           <Button
             className={classNames(cls['color-btn'], [], mods)}
             onClick={togglePicker}
@@ -95,7 +101,7 @@ export const ColorInput = memo(
             ▽
           </Button>
         </div>
-      </div>
+      </>
     );
   },
 );

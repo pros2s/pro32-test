@@ -12,25 +12,6 @@ import { HSLToRGB } from './toDefaultColor/hsl/hslToRgb';
 import { RGBToHex } from './toDefaultColor/rgb/rgbToHex';
 import { RGBToHSL } from './toDefaultColor/rgb/rgbToHsl';
 
-// export interface Color {
-//   readonly hex: string;
-//   readonly rgb: ColorRGB;
-//   readonly hsv: ColorHSV;
-// }
-// interface ColorRGB {
-//   readonly r: number;
-//   readonly g: number;
-//   readonly b: number;
-//   readonly a?: number;
-// }
-// interface ColorHSV {
-//   readonly h: number;
-//   readonly s: number;
-//   readonly v: number;
-//   readonly a?: number;
-// }
-// export {};
-
 export const convertToTypeColor = (color: string): Color => {
   const smallHexRegex = /^#([\da-f]{3}){1,2}$/i;
   const largeHexRegex = /^#([\da-f]{4}){1,2}$/i;
